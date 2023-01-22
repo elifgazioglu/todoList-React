@@ -1,0 +1,85 @@
+#my-todo-list {
+    color: rgb(210, 87, 107);
+    text-align: center;
+}
+
+
+#container{
+    /* display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content:center;
+    align-items: center; */
+    outline: dashed 1px black;
+    /* text-align: center; */
+}
+
+#container-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=text] {
+    width:40%;
+    padding: 10px;
+    margin: 3px;
+    display: block;
+    border: 2px solid rgb(223, 51, 79);
+    border-radius: 7px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgb(190, 94, 110);
+    border-left: rgb(228, 167, 176);
+}
+
+#btn {
+    display: block;
+    width:10%;
+    padding: 10px;
+    margin:3px;
+    background-color: white;
+    border-radius: 7px;
+    border: 2px solid rgb(223, 51, 79);
+    display: table;
+}
+
+#btn:hover {
+    cursor: pointer;
+    border: 3px solid rgb(190, 94, 110);
+}
+
+#btn-todo {
+    width:40%;
+    padding: 10px;
+    margin: 3px;
+    display: block;
+    border: 2px solid rgb(223, 51, 79);
+    border-radius: 7px;
+    background-color: white;
+    text-align: left;
+}
+
+#todo-list{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* text-align: center; basligin ortada durmasini saglar*/
+/* border-radious kose kenarlarinin ovalligini yapma*/
+/* outline: none diyerek input'a tikladigimizda borderindaki maviligi kaldirdi*/
+/* yalnizca alt kenarliklar istiyorsak border-bottom: 2px solid:pink. diyebiliriz mesela*/
+/* odaklanndigi zaman girisin genisligini animasyonlu buyutme icin
+transition: width 0.4s ease-in-out; inputa bunu yazariz
+width: 100% focusa da bunu yazariz*/
+/* cursor: pointer butonun uxerine ok ekleme*/
+/* display:flex butun todo'larin alt alta. siralanmasini sagladi*/
+
+/* flex-direction ozelligi ile flex item'ların yatay (row) veya dikey (column) olarak nasıl dizilip sıralandığını belirleyebilirsiniz.
+row değeri, flex item'ları yatay olarak (soldan sağa) sıralar. Bu değer, varsayılan değerdir ve eğer flex-direction özelliği tanımlanmamışsa flex item'lar yatay olarak sıralanır
+coulmn degeri, alt alta siralar
+ */
