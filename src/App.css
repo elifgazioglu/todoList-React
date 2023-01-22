@@ -21,7 +21,7 @@
 }
 
 input[type=text] {
-    width:40%;
+    width: 600px;
     padding: 11px;
     margin: 3px;
     display: block;
@@ -35,9 +35,9 @@ input:focus {
     border-left: rgb(228, 167, 176);
 }
 
-#btn {
+#btn-add{
     display: block;
-    width:10%;
+    width:6%;
     padding: 10px;
     margin:3px;
     background-color: white;
@@ -46,7 +46,7 @@ input:focus {
     display: table;
 }
 
-#btn:hover {
+#btn-add:hover {
     cursor: pointer;
     border: 3px solid rgb(190, 94, 110);
 }
@@ -65,6 +65,47 @@ input:focus {
 #todo-list{
     display: flex;
     flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#delete-btn{
+    width: 40px;
+    padding: 10px;
+    margin: 3px;
+    display: block;
+    border: 2px solid rgb(223, 51, 79);
+    border-radius: 7px;
+    background-color: white;
+    text-align: center;
+}
+
+#delete-btn:hover{
+    cursor: pointer;
+    border: 3px solid rgb(190, 94, 110);
+}
+
+.check-btn{
+    width: 40px;
+    padding: 10px;
+    margin: 3px;
+    display: block;
+    border: 2px solid rgb(223, 51, 79);
+    border-radius: 7px;
+    background-color: white;
+    text-align: center;
+}
+.check-btn:hover{
+    cursor: pointer;
+    border: 3px solid rgb(190, 94, 110);
+}
+
+.todo-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
 }
