@@ -3,14 +3,14 @@ import {} from "reactstrap";
 import Todo from "./components/Todos";
 import { useState } from "react";
 import { AiFillDelete } from "react-icons/ai";
-import { GrCheckbox, GrCheckboxSelected } from "react-icons/gr";
+import { GrCheckbox } from "react-icons/gr";
 
 function App() {
   const [todos, setTodos] = useState([]);
   const [message, setMessage] = useState("");
 
   function addToTodos(y) {
-    const x = [...todos, y];
+    const x = [...todos, { id: todos.length + 1, name: y }];
     setTodos(x);
   }
 
@@ -22,9 +22,10 @@ function App() {
     setMessage("");
   }
 
-  function todoSelected() {
-    <GrCheckboxSelected></GrCheckboxSelected>;
-  }
+  const deleteTodo = (id) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
+  };
 
   return (
     <div id="container">
@@ -57,8 +58,8 @@ function App() {
             </button>
 
             <Todo todo={todo}></Todo>
-            <button id="delete-btn">
-              {" "}
+
+            <button className="delete-btn" onClick={() => deleteTodo(todo.id)}>
               <AiFillDelete></AiFillDelete>
             </button>
           </div>

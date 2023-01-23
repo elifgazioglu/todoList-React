@@ -6,7 +6,7 @@ import '../App.css'
 const Todo = (props) => {
   return (
     <button id="btn-todo">
-      {props.todo}
+      {props.todo.name}
     </button>
   );
 };

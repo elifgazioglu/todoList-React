@@ -3,15 +3,15 @@
     text-align: center;
 }
 
-
 #container{
-    /* display: flex;
-    height: 100%;
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    height: 90%;
     justify-content:center;
-    align-items: center; */
-    outline: dashed 1px black;
-    /* text-align: center; */
+    align-items: center;
+    border: 2px solid rgb(223, 51, 79);
+    border-radius: 7px;
 }
 
 #container-input{
@@ -71,7 +71,7 @@ input:focus {
     margin: auto;
 }
 
-#delete-btn{
+.delete-btn{
     width: 40px;
     padding: 10px;
     margin: 3px;
@@ -82,7 +82,7 @@ input:focus {
     text-align: center;
 }
 
-#delete-btn:hover{
+.delete-btn:hover{
     cursor: pointer;
     border: 3px solid rgb(190, 94, 110);
 }
