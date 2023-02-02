@@ -10,12 +10,10 @@ function App() {
   const [message, setMessage] = useState("");
 
   function addToTodos(y) {
-    if (message == "") {
-      alert("lutfen bir todo girin");
-      return;
-    }
+    if(message == ""){alert("lutfen bir todo girin"); return;}
     const x = [...todos, { id: todos.length + 1, name: y }];
     setTodos(x);
+    saveTodosToLocalStorage();
   }
 
   const handleChange = (event) => {
@@ -29,11 +27,23 @@ function App() {
   const deleteTodo = (id) => {
     const updatedTodos = todos.filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
+    saveTodosToLocalStorage();
   };
 
+  function saveTodosToLocalStorage(){
+    try{
+      localStorage.setItem('todos', JSON.stringify(todos));
+    }
+    catch (error){
+      console.log(error);
+    }
+  }
+
   useEffect(() => {
-    localStorage.setItem("todo", JSON.stringify(todos));
-  }, [todos]);
+    const unparsedTodosFromLocalStorage = localStorage.getItem('todos')
+    const parsedTodosFromLocalStorage = JSON.parse(unparsedTodosFromLocalStorage)
+    setTodos(parsedTodosFromLocalStorage)
+}, []);
 
   return (
     <div id="container">
