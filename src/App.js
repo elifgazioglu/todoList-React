@@ -1,7 +1,7 @@
 import "./App.css";
 import {} from "reactstrap";
 import Todo from "./components/Todos";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { GrCheckbox } from "react-icons/gr";
 
@@ -10,6 +10,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   function addToTodos(y) {
+    if(message == ""){alert("lutfen bir todo girin"); return;}
     const x = [...todos, { id: todos.length + 1, name: y }];
     setTodos(x);
   }

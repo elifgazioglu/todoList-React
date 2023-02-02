@@ -123,4 +123,6 @@ width: 100% focusa da bunu yazariz*/
 /* flex-direction ozelligi ile flex item'ların yatay (row) veya dikey (column) olarak nasıl dizilip sıralandığını belirleyebilirsiniz.
 row değeri, flex item'ları yatay olarak (soldan sağa) sıralar. Bu değer, varsayılan değerdir ve eğer flex-direction özelliği tanımlanmamışsa flex item'lar yatay olarak sıralanır
 coulmn degeri, alt alta siralar
+cursor:pointer diyerek buttona gelince cursor gelmesini saglar
+
  */
