@@ -10,7 +10,10 @@ function App() {
   const [message, setMessage] = useState("");
 
   function addToTodos(y) {
-    if(message == ""){alert("lutfen bir todo girin"); return;}
+    if (message == "") {
+      alert("lutfen bir todo girin");
+      return;
+    }
     const x = [...todos, { id: todos.length + 1, name: y }];
     setTodos(x);
   }
@@ -27,6 +30,10 @@ function App() {
     const updatedTodos = todos.filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
   };
+
+  useEffect(() => {
+    localStorage.setItem("todo", JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <div id="container">
